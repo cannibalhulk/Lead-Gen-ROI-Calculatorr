@@ -47,6 +47,7 @@ const ResultsChart: React.FC<ResultsChartProps> = ({ results }) => {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip 
+            //@ts-ignore
               formatter={(value: number, name: string, props: { dataKey: string; payload: { name: string } }) => {
                 if (props.dataKey === 'Before' || props.dataKey === 'After') {
                   if (props.payload.name === 'Monthly Revenue (AZN)') {
